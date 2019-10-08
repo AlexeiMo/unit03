@@ -15,6 +15,14 @@ public class Counter {
     }
 
     public void setValue(int value) {
+        if(value > 99) {
+            this.value = 99;
+            return;
+        }
+        else if(value < 0) {
+            this.value = 0;
+            return;
+        }
         this.value = value;
     }
 
@@ -24,13 +32,13 @@ public class Counter {
 
     public void increase() {
         value++;
-        if(value == 100) {
+        if(value > 99) {
             value = 0;
         }
     }
     public void decrease() {
         value--;
-        if(value == -1) {
+        if(value < 0) {
             value = 0;
         }
     }

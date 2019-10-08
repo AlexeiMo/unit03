@@ -36,6 +36,10 @@ public class Main {
 
         /*Counter counter = new Counter();
         System.out.println(counter.getValue());
+        counter.setValue(156);
+        System.out.println(counter.getValue());
+        counter.setValue(-56);
+        System.out.println(counter.getValue());
         counter.increase();
         counter.increase();
         counter.increase();
