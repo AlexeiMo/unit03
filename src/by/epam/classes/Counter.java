@@ -14,14 +14,24 @@ public class Counter {
         this.value = value;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public int getValue() {
         return value;
     }
 
     public void increase() {
         value++;
+        if(value == 100) {
+            value = 0;
+        }
     }
     public void decrease() {
         value--;
+        if(value == -1) {
+            value = 0;
+        }
     }
 }
