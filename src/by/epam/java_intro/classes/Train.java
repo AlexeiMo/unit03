@@ -46,18 +46,4 @@ public class Train {
         return departTime;
     }
 
-
-
-    public static void printByNum(Train[] trains, String num) {
-        int flag = 1;
-        for (int i = 0; i < trains.length; i++) {
-            if(trains[i].num == num) {
-                flag = 0;
-                System.out.println("Train to " + trains[i].dest + " #" + trains[i].num + " departed at " + trains[i].departTime);
-            }
-        }
-        if(flag == 1) {
-            System.out.println("No matches");
-        }
-    }
 }
