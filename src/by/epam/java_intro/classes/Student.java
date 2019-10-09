@@ -1,4 +1,4 @@
-package by.epam.classes;
+package by.epam.java_intro.classes;
 //1. Создайте класс с именем Student, содержащий поля: фамилия и инициалы, номер группы,
 //успеваемость (массив из пяти элементов). Создайте массив из десяти элементов такого типа. Добавьте
 //возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 9 или 10.
@@ -51,22 +51,5 @@ public class Student {
             marks[i] = this.marks[i];
         }
         return marks;
-    }
-
-    public boolean IsGood() {
-        for (int i = 0; i < this.marks.length; i++) {
-            if(this.marks[i] < 9) {
-                 return false;
-            }
-        }
-        return true;
-    }
-
-    public static void printGoogStuds(Student[] studs) {
-        for (int i = 0; i < studs.length; i++) {
-            if(studs[i].IsGood()) {
-                System.out.println("Student " + studs[i].name + " from group #" + studs[i].groupNum + ".");
-            }
-        }
     }
 }

@@ -1,4 +1,4 @@
-package by.epam.classes;
+package by.epam.java_intro.classes;
 //2. Создайте класс Train, содержащий поля: название пункта назначения, номер поезда, время
 //отправления. Создайте данные в массив из пяти элементов типа Train, добавьте возможность
 //сортировки элементов массива по номерам поездов. Добавьте возможность вывода информации о поезде,
@@ -46,22 +46,7 @@ public class Train {
         return departTime;
     }
 
-    public static Train[] sortByNum(Train[] trains) {
-        boolean isSorted = false;
-        Train buf;
-        while(!isSorted) {
-            isSorted = true;
-            for (int i = 0; i < trains.length-1; i++) {
-                if(Integer.parseInt(trains[i].num) > Integer.parseInt(trains[i+1].num)){
-                    isSorted = false;
-                    buf = trains[i];
-                    trains[i] = trains[i+1];
-                    trains[i+1] = buf;
-                }
-            }
-        }
-        return trains;
-    }
+
 
     public static void printByNum(Train[] trains, String num) {
         int flag = 1;
@@ -74,24 +59,5 @@ public class Train {
         if(flag == 1) {
             System.out.println("No matches");
         }
-    }
-
-    public static Train[] sortByDest(Train[] trains) {
-        boolean isSorted = false;
-        Train buf;
-        while(!isSorted) {
-            isSorted = true;
-            for (int i = 0; i < trains.length-1; i++) {
-                if((trains[i].dest.compareTo(trains[i+1].dest) > 0 ) ||
-                        (trains[i].dest.compareTo(trains[i+1].dest) == 0) &&
-                                (trains[i].departTime.compareTo(trains[i+1].departTime) >= 1 )) {
-                    isSorted = false;
-                    buf = trains[i];
-                    trains[i] = trains[i+1];
-                    trains[i+1] = buf;
-                }
-            }
-        }
-        return trains;
     }
 }
